@@ -1,0 +1,54 @@
+# ~/.config/noctalia/config.toml
+# Lo que cambies desde la ventana de ajustes (Mod+Shift+S) se guarda aparte en
+# ~/.local/state/noctalia/settings.toml y tiene prioridad sobre este archivo.
+
+[theme]
+mode = "dark"
+source = "wallpaper"          # colores generados a partir del fondo de pantalla
+wallpaper_scheme = "m3-content"
+
+# Plantillas: kitty y btop toman los colores del wallpaper
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids = ["kitty", "btop"]
+
+# Barra a todo lo ancho, fondo transparente y módulos en cápsulas
+[bar.default]
+position = "top"
+thickness = 34
+reserve_space = true
+margin_ends = 0
+margin_edge = 0
+background_opacity = 0.0
+radius = 0
+capsule = true
+capsule_opacity = 0.75
+padding = 10
+widget_spacing = 6
+start  = ["launcher", "workspaces", "active_window"]
+center = ["clock"]
+end    = ["tray", "brightness", "volume", "network", "bluetooth", "power_profile", "battery", "control-center", "session"]
+
+[widget.clock]
+format = "{:%H:%M  %a %d}"
+
+[wallpaper]
+enabled = true
+directory = "/home/sonaca/Imágenes/Wallpapers"
+fill_mode = "crop"
+transition_duration = 1200
+
+# Igual que tenías con hypridle: pantalla apagada a los 5 min sin uso
+[idle.behavior.screen-off]
+timeout = 300
+action = "screen_off"
+enabled = true
+
+# Pantalla de bloqueo (Mod+L): wallpaper desenfocado y teñido con la paleta
+[lockscreen]
+enabled = true
+blur_intensity = 0.65
+tint_intensity = 0.35
+transition = ["fade", "disc", "honeycomb"]
+transition_duration = 900
+edge_smoothness = 0.4

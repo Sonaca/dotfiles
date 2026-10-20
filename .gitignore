@@ -1,0 +1,24 @@
+# Lista blanca: se ignora todo ~/.config salvo las carpetas de abajo
+/*
+!/.gitignore
+!/README.md
+!/niri/
+!/noctalia/
+!/kitty/
+!/zsh/
+!/gtk-3.0/
+!/gtk-4.0/
+!/btop/
+
+# Generado por las plantillas de Noctalia (cambia con cada wallpaper)
+/kitty/themes/
+/btop/themes/
+/gtk-3.0/noctalia.css
+/gtk-4.0/noctalia.css
+/niri/noctalia.kdl
+
+# Personal o descargado aparte
+/zsh/.zsh_history
+/zsh/.zcompdump*
+/zsh/powerlevel10k/
+*.bak*
